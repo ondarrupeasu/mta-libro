@@ -330,10 +330,15 @@
 <h2 id="what-is-dmx">What is DMX?</h2></main>
 </div>
 <aside id="edits-panel" class="edits-panel">
-  <div class="edits-head">Photo edits (<span id="edits-count">0</span>)
-    <button id="edits-export">Export JSON</button></div>
+  <div class="edits-head">Photo edits (<span id="edits-count">0</span>)</div>
+  <div class="pub-row">
+    <button id="edits-publish" class="pub">Publish to web</button>
+    <button id="edits-token" class="tok">Set GitHub token…</button>
+    <button id="edits-export" class="tok">Export JSON</button>
+  </div>
+  <p id="pub-status" class="pub-status"></p>
   <div id="edits-list"></div>
-  <p class="muted small">Edits are saved in this browser only. Use “Export JSON” to make them permanent in the project.</p>
+  <p class="muted small">“Publish to web” commits your photo changes straight to the site (rebuilds in ~1 min). The token stays only in this browser. “Export JSON” just downloads the edits.</p>
 </aside>
 <script src="assets/search.js" defer></script>
 <script src="assets/editor.js" defer></script>
