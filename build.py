@@ -366,7 +366,10 @@ def extract_deck(cfg):
     d.close()
     return slides
 
-def render_deck(cfg, slides):
+def render_deck(cfg, slides, corr=None):
+    corr = corr or []
+    def fix(s):
+        return apply_corrections(s, corr) if corr else s
     aid = cfg["anchor"]
     out = [f'<section class="deck" id="{aid}">',
            '<div class="deck-tag">◈ Classroom material</div>',
@@ -377,17 +380,19 @@ def render_deck(cfg, slides):
     for s in slides:
         out.append('<div class="slide">')
         if s["title"] and s["title"] != last_title:
-            out.append(f'<h3>{html.escape(s["title"])}</h3>')
+            out.append(f'<h3>{html.escape(fix(s["title"]))}</h3>')
             last_title = s["title"]
-        # agrupa el cuerpo en un parrafo (respeta links)
-        parts = []
-        for l in s["body"]:
-            t = html.escape(l["txt"])
-            if l["uri"]:
-                t = f'<a href="{html.escape(l["uri"])}" target="_blank" rel="noopener">{t}</a>'
-            parts.append(t)
-        if parts:
-            out.append("<p>" + " ".join(parts) + "</p>")
+        # cuerpo: corrige el texto unido y re-inserta los enlaces por su texto ancla
+        body_txt = fix(" ".join(l["txt"] for l in s["body"]).strip())
+        if body_txt:
+            html_body = html.escape(body_txt)
+            for l in s["body"]:
+                if l["uri"]:
+                    anchor = html.escape(l["txt"])
+                    link = (f'<a href="{html.escape(l["uri"])}" target="_blank" '
+                            f'rel="noopener">{anchor}</a>')
+                    html_body = html_body.replace(anchor, link, 1)
+            out.append("<p>" + html_body + "</p>")
         for f in s["imgs"]:
             out.append(f'<figure class="slide-fig"><img loading="lazy" src="{f}" alt="">'
                        f'<figcaption><button class="swap">swap image</button></figcaption></figure>')
@@ -561,7 +566,10 @@ def main():
         if slug in DECKS:
             cfg = DECKS[slug]
             slides = extract_deck(cfg)
-            inject_after_section(frag, cfg.get("after", "end"), render_deck(cfg, slides))
+            deck_corr = load_corrections(cfg["slug"])
+            inject_after_section(frag, cfg.get("after", "end"), render_deck(cfg, slides, deck_corr))
+            if deck_corr:
+                print(f"     deck corrections: {len(deck_corr)} rule(s)")
             # entrada en el TOC, justo tras su seccion
             entry = (cfg["anchor"], f'★ {cfg["title"]} (complementary)')
             pos = next((k + 1 for k, (sid, t) in enumerate(toc)

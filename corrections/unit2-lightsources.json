@@ -1,0 +1,206 @@
+[
+ {
+  "find": "shadows lees illumination",
+  "replace": "shadows less illumination",
+  "type": "spelling",
+  "note": "lees→less"
+ },
+ {
+  "find": "The lent aperture (f-stop)",
+  "replace": "The lens aperture (f-stop)",
+  "type": "spelling",
+  "note": "lent→lens"
+ },
+ {
+  "find": "if ther is not enough light",
+  "replace": "if there is not enough light",
+  "type": "spelling",
+  "note": "ther→there"
+ },
+ {
+  "find": "the camera´sensitivity by",
+  "replace": "the camera´s sensitivity by",
+  "type": "grammar",
+  "note": "missing space/possessive"
+ },
+ {
+  "find": "mayt compensate by doing the following: ●",
+  "replace": "may compensate by doing the following: ●",
+  "type": "spelling",
+  "note": "mayt→may"
+ },
+ {
+  "find": "mayt compensate by doing the following: We",
+  "replace": "may compensate by doing the following: We",
+  "type": "spelling",
+  "note": "mayt→may"
+ },
+ {
+  "find": "gives a hars,",
+  "replace": "gives a harsh,",
+  "type": "spelling",
+  "note": "hars→harsh"
+ },
+ {
+  "find": "square meter or NIT (unity)",
+  "replace": "square meter or NIT (unit)",
+  "type": "spanish",
+  "note": "unity→unit"
+ },
+ {
+  "find": "toursteno light of 3200K-",
+  "replace": "tungsten light of 3200K-",
+  "type": "spanish",
+  "note": "toursteno→tungsten"
+ },
+ {
+  "find": "toursteno light of 3200K,",
+  "replace": "tungsten light of 3200K,",
+  "type": "spanish",
+  "note": "toursteno→tungsten"
+ },
+ {
+  "find": "The are cold light",
+  "replace": "There are cold light",
+  "type": "grammar",
+  "note": "The→There"
+ },
+ {
+  "find": "eta artificial light sources",
+  "replace": "and artificial light sources",
+  "type": "spanish",
+  "note": "eta→and"
+ },
+ {
+  "find": "HARD SHADOWS that is have a SHORT SHADING GRADIENT",
+  "replace": "HARD SHADOWS meaning they have a SHORT SHADING GRADIENT",
+  "type": "grammar",
+  "note": "broken clause"
+ },
+ {
+  "find": "quality of theses fixtures",
+  "replace": "quality of these fixtures",
+  "type": "spelling",
+  "note": "theses→these"
+ },
+ {
+  "find": "they does not have",
+  "replace": "they do not have",
+  "type": "grammar",
+  "note": "does→do"
+ },
+ {
+  "find": "because the tend to come",
+  "replace": "because they tend to come",
+  "type": "grammar",
+  "note": "the→they"
+ },
+ {
+  "find": "of tugsteno",
+  "replace": "of tungsten",
+  "type": "spanish",
+  "note": "tugsteno→tungsten"
+ },
+ {
+  "find": "with much great control",
+  "replace": "with much greater control",
+  "type": "grammar",
+  "note": "great→greater"
+ },
+ {
+  "find": "quartz o halogeno one",
+  "replace": "quartz or halogen one",
+  "type": "spanish",
+  "note": "o halogeno→or halogen"
+ },
+ {
+  "find": "and there device of different powers",
+  "replace": "and there are devices of different powers",
+  "type": "grammar",
+  "note": "missing verb/plural"
+ },
+ {
+  "find": "The smaller is 300 watts",
+  "replace": "The smallest is 300 watts",
+  "type": "grammar",
+  "note": "smaller→smallest"
+ },
+ {
+  "find": "lamps of tungsteno",
+  "replace": "lamps of tungsten",
+  "type": "spanish",
+  "note": "tungsteno→tungsten"
+ },
+ {
+  "find": "that can not to do with the discharge lamps",
+  "replace": "that we cannot do with the discharge lamps",
+  "type": "grammar",
+  "note": "can not to do→we cannot do"
+ },
+ {
+  "find": "HMI is a devices of",
+  "replace": "HMI is a device of",
+  "type": "grammar",
+  "note": "a devices→a device"
+ },
+ {
+  "find": "5600 K, cold fight, and",
+  "replace": "5600 K, cold light, and",
+  "type": "spelling",
+  "note": "fight→light"
+ },
+ {
+  "find": "fresnel of tungsteno,",
+  "replace": "fresnel of tungsten,",
+  "type": "spanish",
+  "note": "tungsteno→tungsten"
+ },
+ {
+  "find": "The characteristic of light geometry are",
+  "replace": "The characteristics of light geometry are",
+  "type": "grammar",
+  "note": "agreement"
+ },
+ {
+  "find": "instead of tungsteno.",
+  "replace": "instead of tungsten.",
+  "type": "spanish",
+  "note": "tungsteno→tungsten"
+ },
+ {
+  "find": "this type of lamps need to carry",
+  "replace": "this type of lamp needs to carry",
+  "type": "grammar",
+  "note": "agreement"
+ },
+ {
+  "find": "cold tubes or warn tubes",
+  "replace": "cold tubes or warm tubes",
+  "type": "spelling",
+  "note": "warn→warm"
+ },
+ {
+  "find": "with a DINNER (incorporado)",
+  "replace": "with a DIMMER (incorporado)",
+  "type": "spelling",
+  "note": "DINNER→DIMMER"
+ },
+ {
+  "find": "This fluorescents consume",
+  "replace": "These fluorescents consume",
+  "type": "grammar",
+  "note": "This→These"
+ },
+ {
+  "find": "The are small and with little weigh",
+  "replace": "They are small and with little weight",
+  "type": "grammar",
+  "note": "The are→They are; weigh→weight"
+ },
+ {
+  "find": "because of that are usually used",
+  "replace": "because of that they are usually used",
+  "type": "grammar",
+  "note": "missing subject"
+ }
+]
