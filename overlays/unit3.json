@@ -1,0 +1,45 @@
+[
+  {
+    "after": "3.2",
+    "kind": "update",
+    "title": "Digital wireless microphones and the RF spectrum squeeze",
+    "paras": [
+      "Analogue UHF radio mics have been squeezed by the &lsquo;<b>digital dividend</b>&rsquo;: the 700&nbsp;MHz and 600&nbsp;MHz bands were reallocated to mobile networks, so those old frequencies are now off-limits. Current systems are <b>digital wireless</b> (Sennheiser EW-DX, Shure Axient Digital, Wisycom), offering encryption, more channels per MHz and cleaner audio than analogue companding."
+    ],
+    "sources": [
+      {"label": "Wireless microphone (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Wireless_microphone"},
+      {"label": "Digital dividend after DSO (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Digital_dividend_after_digital_television_transition"}
+    ]
+  },
+  {
+    "after": "3.3",
+    "kind": "update",
+    "title": "32-bit float recording and timecode sync",
+    "paras": [
+      "Field recorders (Sound Devices MixPre, Zoom F-series) now record in <b>32-bit float</b>. The dynamic range is so wide that clipping and under-recording are effectively impossible &mdash; levels are set afterwards in post. <b>Timecode</b> generators (Tentacle Sync, UltraSync) keep multi-camera and separate sound recorders locked together."
+    ],
+    "sources": [
+      {"label": "Audio bit depth &mdash; floating point (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Audio_bit_depth#Floating-point"}
+    ]
+  },
+  {
+    "after": "3.4",
+    "kind": "update",
+    "title": "Audio over IP (Dante, AES67) and immersive sound",
+    "paras": [
+      "Analogue multicore and MADI are giving way to <b>audio-over-IP</b>: <b>Dante</b> and the open <b>AES67</b> standard carry hundreds of channels over ordinary Ethernet with sample-accurate sync. Delivery has also moved towards <b>immersive</b> formats &mdash; Dolby Atmos for cinema and streaming, and ambisonics for 360&deg;/VR."
+    ],
+    "sources": [
+      {"label": "Dante (networking) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Dante_(networking)"},
+      {"label": "AES67 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/AES67"}
+    ]
+  },
+  {
+    "after": "3.4",
+    "kind": "legacy",
+    "title": "DAT, MiniDisc and the old UHF bands",
+    "paras": [
+      "DAT and MiniDisc as recording media, and analogue radio mics operating in the vacated 700/800&nbsp;MHz bands, are obsolete &mdash; transmitting in those frequencies is now illegal in most countries."
+    ]
+  }
+]

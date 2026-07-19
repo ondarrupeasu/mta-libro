@@ -1,0 +1,35 @@
+[
+  {
+    "after": "5.2",
+    "kind": "update",
+    "title": "Modern NLEs, GPU acceleration and colour-managed workflows",
+    "paras": [
+      "Non-linear editing today runs on GPU-accelerated software &mdash; <b>DaVinci Resolve</b>, Adobe Premiere Pro and Final Cut Pro &mdash; that edits, grades, mixes and finishes in one application. High-resolution RAW is handled through <b>proxy</b> workflows, and colour is managed end-to-end with <b>ACES</b> for consistent results and <b>HDR</b> grading.",
+      "Review and hand-off are increasingly <b>cloud-based</b> (Frame.io, Resolve Project Server), and <b>AI</b> tools now assist with transcription/subtitles, shot matching and object removal."
+    ],
+    "sources": [
+      {"label": "DaVinci Resolve (Wikipedia)", "url": "https://en.wikipedia.org/wiki/DaVinci_Resolve"},
+      {"label": "Academy Color Encoding System (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Academy_Color_Encoding_System"}
+    ]
+  },
+  {
+    "after": "5.5",
+    "kind": "update",
+    "title": "Delivery codecs and containers now",
+    "paras": [
+      "For delivery, <b>H.265/HEVC</b> and the royalty-free <b>AV1</b> have joined H.264, usually inside an <b>MP4</b> or <b>MOV</b> container. Streaming is delivered with <b>adaptive bitrate</b> (HLS and MPEG-DASH) rather than a single fixed file, and masters are commonly ProRes or DNxHR."
+    ],
+    "sources": [
+      {"label": "MPEG-DASH (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP"},
+      {"label": "AV1 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/AV1"}
+    ]
+  },
+  {
+    "after": "5.2",
+    "kind": "legacy",
+    "title": "Linear/tape editing (VTRs)",
+    "paras": [
+      "Linear editing with VTRs and edit controllers &mdash; assemble/insert edits between tape machines &mdash; is obsolete. Everything is non-linear and file-based; the tape decks described here survive only for archive digitisation."
+    ]
+  }
+]

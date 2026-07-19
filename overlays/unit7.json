@@ -1,0 +1,46 @@
+[
+  {
+    "after": "7.2",
+    "kind": "update",
+    "title": "Digital terrestrial today: DVB-T2 and ATSC 3.0",
+    "paras": [
+      "Terrestrial broadcasting has moved to more efficient standards. Europe and much of the world use <b>DVB-T2</b> (with HEVC) for HD/UHD, while North America and Korea are deploying <b>ATSC&nbsp;3.0</b> (&lsquo;NextGen TV&rsquo;), an IP-based system that mixes over-the-air and broadband delivery, HDR and interactivity.",
+      "On the receiver side, <b>HbbTV</b> blends broadcast channels with on-demand content over the internet."
+    ],
+    "sources": [
+      {"label": "DVB-T2 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/DVB-T2"},
+      {"label": "ATSC 3.0 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/ATSC_3.0"}
+    ]
+  },
+  {
+    "after": "7.2.1",
+    "kind": "update",
+    "title": "IP contribution and 5G",
+    "paras": [
+      "Getting the signal from the venue to the station (&lsquo;contribution&rsquo;) is now largely over IP: <b>SRT</b> and <b>RIST</b> for reliable transport over the public internet, <b>SMPTE ST&nbsp;2110</b> inside facilities, and cellular <b>bonded</b> uplinks / 5G backpacks for mobile live news and events."
+    ],
+    "sources": [
+      {"label": "Reliable Internet Stream Transport (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Reliable_Internet_Stream_Transport"}
+    ]
+  },
+  {
+    "after": "7.5",
+    "kind": "update",
+    "title": "Streaming delivery: OTT, HLS and DASH",
+    "paras": [
+      "Most viewing is now <b>OTT</b> streaming. Video is delivered with <b>adaptive bitrate</b> over HTTP &mdash; Apple <b>HLS</b> and the open <b>MPEG-DASH</b> &mdash; from a <b>CDN</b>, so the player switches quality to match the viewer's connection. Low-latency variants bring live streaming close to broadcast delay."
+    ],
+    "sources": [
+      {"label": "HTTP Live Streaming (Wikipedia)", "url": "https://en.wikipedia.org/wiki/HTTP_Live_Streaming"},
+      {"label": "MPEG-DASH (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP"}
+    ]
+  },
+  {
+    "after": "7.3.1",
+    "kind": "legacy",
+    "title": "Analogue TV and radio switch-off",
+    "paras": [
+      "Analogue terrestrial television has been switched off across most of the world (the &lsquo;digital switchover&rsquo;), and analogue radio is following via DAB+ and internet radio. Analogue broadcast parameters remain useful as background, not as current practice."
+    ]
+  }
+]

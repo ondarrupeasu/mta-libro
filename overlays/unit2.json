@@ -1,0 +1,35 @@
+[
+  {
+    "after": "2.3",
+    "kind": "update",
+    "title": "The LED revolution: RGBACL, tunable white and point-source fixtures",
+    "paras": [
+      "The tungsten, HMI and fluorescent fixtures in the book have largely been replaced by <b>LED</b>. Multi-emitter engines (RGBW / RGBA / <b>RGBACL</b>) produce a full colour gamut and <b>tunable white</b> from a single unit, with high <b>CRI/TLCI</b> for accurate skin tones on camera. Soft panels (ARRI SkyPanel, Aputure Nova) and hard &lsquo;point-source&rsquo; LEDs (ARRI Orbiter, Aputure LS 600) now cover most needs.",
+      "<b>Pixel</b> fixtures &mdash; LED tubes and dots that are individually addressable (Astera Titan Tubes, Quasar Science) &mdash; enable effects and &lsquo;pixel-mapping&rsquo; that were impossible with the sources described here."
+    ],
+    "sources": [
+      {"label": "Color rendering index (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Color_rendering_index"},
+      {"label": "Stage lighting instrument (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Stage_lighting_instrument"}
+    ]
+  },
+  {
+    "after": "2.5",
+    "kind": "update",
+    "title": "Networked control: Art-Net, sACN, RDM and wireless DMX",
+    "paras": [
+      "<b>DMX512</b> is still the base protocol, but modern rigs carry hundreds of universes over standard Ethernet using <b>Art-Net</b> and <b>sACN (ANSI E1.31)</b>. <b>RDM</b> adds bidirectional feedback &mdash; remote addressing and fixture status over the DMX line &mdash; and <b>wireless DMX</b> (LumenRadio CRMX) removes cabling for moving or temporary fixtures."
+    ],
+    "sources": [
+      {"label": "Art-Net (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Art-Net"},
+      {"label": "RDM (lighting) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/RDM_(lighting)"}
+    ]
+  },
+  {
+    "after": "2.4",
+    "kind": "legacy",
+    "title": "Resistive dimmers and pure tungsten rigs",
+    "paras": [
+      "Resistance and autotransformer dimmers, and all-tungsten rigs, are now historical. Dimming is electronic (thyristor/IGBT) or, increasingly, performed inside the LED fixture over data &mdash; the classic tungsten dimmer curve is simply emulated in software."
+    ]
+  }
+]

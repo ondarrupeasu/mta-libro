@@ -1,0 +1,44 @@
+[
+  {
+    "after": "6.2",
+    "kind": "update",
+    "title": "Modern workstation hardware: NVMe, GPU compute and Apple silicon",
+    "paras": [
+      "Multimedia workstations have shifted from spinning disks and optical drives to <b>NVMe SSDs</b> on the PCIe bus, high-core-count CPUs and powerful <b>GPUs</b> that accelerate encoding, effects and AI. Apple's <b>M-series (Apple silicon)</b> integrates CPU, GPU and media engines on one chip, and hardware encoders/decoders (NVENC, QuickSync) offload video work from the CPU."
+    ],
+    "sources": [
+      {"label": "NVM Express (Wikipedia)", "url": "https://en.wikipedia.org/wiki/NVM_Express"},
+      {"label": "Apple silicon (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Apple_silicon"}
+    ]
+  },
+  {
+    "after": "6.3",
+    "kind": "update",
+    "title": "Networking and the cloud today",
+    "paras": [
+      "Local networks now run <b>Gigabit/10-Gigabit Ethernet</b> and <b>Wi-Fi 6/6E</b>, and fibre to the premises is common. Storage and collaboration have moved to the <b>cloud</b> (object storage, shared drives) and to on-prem <b>NAS</b>, replacing the removable media and simple LANs described in the book."
+    ],
+    "sources": [
+      {"label": "Wi-Fi 6 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Wi-Fi_6"}
+    ]
+  },
+  {
+    "after": "6.4",
+    "kind": "update",
+    "title": "AI in image and media tools",
+    "paras": [
+      "Image and video applications now include <b>AI/ML</b> features as standard: generative fill and object removal, upscaling and denoising, background removal, auto-masking and rotoscoping, and speech-to-text captioning. These accelerate tasks that were manual when the book was written."
+    ],
+    "sources": [
+      {"label": "Generative artificial intelligence (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"}
+    ]
+  },
+  {
+    "after": "6.2",
+    "kind": "legacy",
+    "title": "Optical discs and floppy media",
+    "paras": [
+      "CD/DVD/Blu-ray burners, floppy diskettes and other removable optical/magnetic media are effectively obsolete for production. Modern machines often ship without an optical drive; distribution is by network, SSD or the cloud."
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "after": "1.2",
+    "kind": "update",
+    "title": "Modern image sensors: BSI, stacked CMOS and global shutter",
+    "paras": [
+      "The book describes the CCD/CMOS sensor in general terms. Today's cameras use <b>back-side-illuminated (BSI)</b> and <b>stacked CMOS</b> designs that place the wiring and memory behind the photodiodes, giving much higher sensitivity and read-out speed. <b>Dual native ISO</b> (dual-gain read-out) delivers clean images across a very wide range of light levels.",
+      "A major recent step is the <b>global shutter</b>: the Sony &alpha;9 III (2023) was the first full-frame camera to expose every pixel at once, removing the &lsquo;rolling-shutter&rsquo; skew that distorts fast motion and flashing lights. Large-format sensors (Super-35 up to full-frame and larger) are now the norm in digital cinema &mdash; ARRI ALEXA 35, Sony VENICE 2, RED V-RAPTOR."
+    ],
+    "sources": [
+      {"label": "Back-illuminated sensor (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Back-illuminated_sensor"},
+      {"label": "Rolling shutter (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Rolling_shutter"}
+    ]
+  },
+  {
+    "after": "1.4",
+    "kind": "update",
+    "title": "Codecs, RAW, log and HDR today",
+    "paras": [
+      "Beyond the DV/MPEG-2 family in the book, modern acquisition records <b>H.264/AVC</b> and the far more efficient <b>H.265/HEVC</b>, plus high-quality mastering codecs <b>Apple ProRes</b> and <b>Blackmagic RAW</b>. 10-bit 4:2:2 colour and camera <b>RAW</b> (ProRes RAW, BRAW) are now available even on affordable bodies.",
+      "Cameras shoot in <b>log</b> gamma (S-Log3, Log-C, V-Log) to preserve dynamic range for grading, and deliver <b>HDR</b> masters in HLG or PQ (HDR10, Dolby Vision). For streaming delivery the current royalty-free codec is <b>AV1</b> (2018)."
+    ],
+    "sources": [
+      {"label": "HEVC (Wikipedia)", "url": "https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding"},
+      {"label": "AV1 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/AV1"}
+    ]
+  },
+  {
+    "after": "1.5",
+    "kind": "update",
+    "title": "Recording media: CFexpress and NVMe SSDs",
+    "paras": [
+      "SD cards and spinning hard disks have been joined by <b>CFexpress</b> (Type A/B) and external <b>NVMe SSDs</b>. They use the PCIe/NVMe bus to sustain the very high, constant bit-rates that 4K/8K RAW and high-frame-rate recording demand."
+    ],
+    "sources": [
+      {"label": "CFexpress (Wikipedia)", "url": "https://en.wikipedia.org/wiki/CFexpress"}
+    ]
+  },
+  {
+    "after": "1.4",
+    "kind": "legacy",
+    "title": "Tape, tubes and interlaced SD",
+    "paras": [
+      "Videotape formats (DV, DVCAM, HDV, Digital Betacam), tube pick-up cameras and interlaced standard definition covered here are now historical. Acquisition is file-based and progressive; interlacing survives only in legacy broadcast chains."
+    ]
+  }
+]

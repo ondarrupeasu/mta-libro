@@ -1,0 +1,3 @@
+[
+  { "find": "TECHNIQIES", "replace": "TECHNIQUES", "note": "typo OCR en el título de la unidad" }
+]

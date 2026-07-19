@@ -1,0 +1,34 @@
+[
+  {
+    "after": "4.4",
+    "kind": "update",
+    "title": "IP video production: SMPTE ST 2110, NDI and SRT",
+    "paras": [
+      "The SDI router-and-mixer model in the book is being replaced by <b>IP-based production</b>. Broadcast facilities move uncompressed video, audio and data as separate flows over the network with <b>SMPTE ST&nbsp;2110</b>; smaller studios and live streaming use <b>NDI</b> (and NDI&nbsp;HX) on the LAN and <b>SRT</b> for reliable transport over the public internet.",
+      "Hardware switchers now sit alongside <b>software/cloud switchers</b> (Blackmagic ATEM, vMix, OBS), and <b>PTZ</b> cameras controlled over IP have become standard in multi-camera setups."
+    ],
+    "sources": [
+      {"label": "SMPTE 2110 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/SMPTE_2110"},
+      {"label": "NDI (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Network_Device_Interface"}
+    ]
+  },
+  {
+    "after": "4.1",
+    "kind": "update",
+    "title": "Remote and cloud production (REMI)",
+    "paras": [
+      "Cameras and staff no longer need to be co-located with the control room. In <b>remote-integration (REMI)</b> production, signals are sent back over IP (SRT, ST&nbsp;2110, or cellular <b>bonded</b> links) to a central or cloud-based gallery, cutting cost and travel for live events."
+    ],
+    "sources": [
+      {"label": "Secure Reliable Transport (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Secure_Reliable_Transport"}
+    ]
+  },
+  {
+    "after": "4.6",
+    "kind": "legacy",
+    "title": "SDI-only chains and tape formats",
+    "paras": [
+      "Pure SDI infrastructure, analogue composite links and the videotape master formats listed here still exist but are legacy. New builds are file- and IP-based; SDI now coexists with (or is replaced by) 2110/NDI."
+    ]
+  }
+]
