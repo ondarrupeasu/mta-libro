@@ -1,0 +1,152 @@
+[
+ {
+  "find": "or example, a sound wave",
+  "replace": "for example, a sound wave",
+  "type": "ocr",
+  "note": "or→for"
+ },
+ {
+  "find": "the speed at a sound wave propagates in diferent mediums",
+  "replace": "the speed at which a sound wave propagates in different mediums",
+  "type": "grammar",
+  "note": "at which; diferent→different"
+ },
+ {
+  "find": "so, higher the air temperature is higher it will be its speed of propagation",
+  "replace": "so, the higher the air temperature is, the higher its speed of propagation will be",
+  "type": "grammar",
+  "note": "broken comparative"
+ },
+ {
+  "find": "Determinate the period",
+  "replace": "Determine the period",
+  "type": "grammar",
+  "note": "wrong verb form"
+ },
+ {
+  "find": "interpretation maked by",
+  "replace": "interpretation made by",
+  "type": "grammar",
+  "note": "maked→made"
+ },
+ {
+  "find": "between both monitors are used",
+  "replace": "between both monitors is used",
+  "type": "grammar",
+  "note": "subject-verb agreement"
+ },
+ {
+  "find": "(Depends on the FRECUENCY)",
+  "replace": "(Depends on the FREQUENCY)",
+  "type": "spelling",
+  "note": "FRECUENCY→FREQUENCY"
+ },
+ {
+  "find": "HIGHER FRECUENCY",
+  "replace": "HIGHER FREQUENCY",
+  "type": "spelling",
+  "note": "FRECUENCY→FREQUENCY"
+ },
+ {
+  "find": "LOWER FRECUENCY",
+  "replace": "LOWER FREQUENCY",
+  "type": "spelling",
+  "note": "FRECUENCY→FREQUENCY"
+ },
+ {
+  "find": "GREATER the AMPLITUD",
+  "replace": "GREATER the AMPLITUDE",
+  "type": "spanish",
+  "note": "amplitud→amplitude"
+ },
+ {
+  "find": "SMALLER the AMPLITUD",
+  "replace": "SMALLER the AMPLITUDE",
+  "type": "spanish",
+  "note": "amplitud→amplitude"
+ },
+ {
+  "find": "AMPLITUD of vibration",
+  "replace": "AMPLITUDE of vibration",
+  "type": "spanish",
+  "note": "amplitud→amplitude"
+ },
+ {
+  "find": "as they move through from air",
+  "replace": "as it moves through from air",
+  "type": "grammar",
+  "note": "pronoun agreement"
+ },
+ {
+  "find": "the angle at which is reflected",
+  "replace": "the angle at which it is reflected",
+  "type": "grammar",
+  "note": "missing it"
+ },
+ {
+  "find": "Difraction of the sound",
+  "replace": "Diffraction of the sound",
+  "type": "spelling",
+  "note": "Difraction→Diffraction"
+ },
+ {
+  "find": "one mic in from of another mic",
+  "replace": "one mic in front of another mic",
+  "type": "ocr",
+  "note": "from→front"
+ },
+ {
+  "find": "problems to pick up the sound source",
+  "replace": "problems picking up the sound source",
+  "type": "grammar",
+  "note": "problems to→problems -ing"
+ },
+ {
+  "find": "expressed in V/PA.",
+  "replace": "expressed in V/Pa.",
+  "type": "spelling",
+  "note": "pascal unit case"
+ },
+ {
+  "find": "TDH or total harmonic distortion",
+  "replace": "THD or total harmonic distortion",
+  "type": "spelling",
+  "note": "correct acronym THD"
+ },
+ {
+  "find": "short- circuiting",
+  "replace": "short-circuiting",
+  "type": "ocr",
+  "note": "stray space"
+ },
+ {
+  "find": "Shure Sm 58",
+  "replace": "Shure SM 58",
+  "type": "spelling",
+  "note": "model name case"
+ },
+ {
+  "find": "allows to operate on a band",
+  "replace": "allows you to operate on a band",
+  "type": "grammar",
+  "note": "allows to→allows you to"
+ },
+ {
+  "find": "allow to regulate the master output",
+  "replace": "allow you to regulate the master output",
+  "type": "grammar",
+  "note": "allow to→allow you to"
+ },
+ {
+  "find": "Performs a comparative analysis",
+  "replace": "Perform a comparative analysis",
+  "type": "grammar",
+  "note": "imperative"
+ },
+ {
+  "find": "as analogue mixer, implementing",
+  "replace": "as analogue mixers, implementing",
+  "type": "grammar",
+  "note": "missing plural/article"
+ }
+]

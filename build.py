@@ -150,7 +150,8 @@ def extract(slug, pdf):
     return elements
 
 # ---------------------------------------------------------------- render
-def render_unit(slug, elements, short):
+def render_unit(slug, elements, short, corr=None):
+    corr = corr or []
     frag, toc = [], []
     buf = []
     in_call = None
@@ -161,16 +162,19 @@ def render_unit(slug, elements, short):
     prev_y1 = None
     prev_pg = None
 
+    def fix(s):
+        return apply_corrections(s, corr) if corr else s
+
     def flush_para():
         if buf:
-            frag.append(f'<p>{html.escape(" ".join(buf).strip())}</p>')
+            frag.append(f'<p>{html.escape(fix(" ".join(buf).strip()))}</p>')
             buf.clear()
 
     def flush_call():
         nonlocal in_call
         if in_call:
             cls, icon, label = in_call
-            body = "".join(f"<p>{html.escape(x)}</p>" for x in call_buf if x.strip())
+            body = "".join(f"<p>{html.escape(fix(x))}</p>" for x in call_buf if x.strip())
             frag.append(f'<div class="callout {cls}"><div class="callout-h">{icon} {label}</div>{body}</div>')
             call_buf.clear()
             in_call = None
@@ -231,16 +235,17 @@ def render_unit(slug, elements, short):
             if last_was_heading and not re.match(r'^\d', txt) and frag and frag[-1].startswith("<h"):
                 tag = frag[-1][1:3]  # h2 / h3
                 inner = re.sub(r'</h[23]>$', '', frag[-1])
-                frag[-1] = inner + " " + html.escape(txt) + f"</{tag}>"
+                frag[-1] = inner + " " + html.escape(fix(txt)) + f"</{tag}>"
                 continue
             flush_para(); flush_call()
             if up.strip() == "CONTENTS":
                 continue
             lvl = 2 if t == "h2" else 3
-            sid = slugify(txt)
+            sid = slugify(txt)                 # ancla desde el texto original (estable)
+            disp = fix(txt)
             if lvl == 2 and re.match(r'^\d+\.\d', txt):
-                toc.append((sid, txt))
-            frag.append(f'<h{lvl} id="{sid}">{html.escape(txt)}</h{lvl}>')
+                toc.append((sid, disp))
+            frag.append(f'<h{lvl} id="{sid}">{html.escape(disp)}</h{lvl}>')
             last_was_heading = True
             continue
 
@@ -276,6 +281,7 @@ def render_unit(slug, elements, short):
     title = re.sub(r'\s+', ' ', title).strip() or f"Unit — {short}"
     # inserta espacio tras 'UNIT n:' si falta (ej. 'UNIT 5:POST')
     title = re.sub(r'(UNIT\s*\d+:)(\S)', r'\1 \2', title)
+    title = fix(title)
     frag.insert(0, f'<h1>{html.escape(title)}</h1>')
     return title, toc, frag
 
@@ -536,14 +542,9 @@ def main():
     index_cards = []
     for slug, pdf, short in UNITS:
         els = extract(slug, pdf)
-        title, toc, frag = render_unit(slug, els, short)
-
-        # --- correcciones de texto (typos del OCR, cambios que pidas) ---
-        corr = load_corrections(slug)
+        corr = load_corrections(slug)          # correcciones de texto (proofreading)
+        title, toc, frag = render_unit(slug, els, short, corr)
         if corr:
-            title = apply_corrections(title, corr)
-            frag = [apply_corrections(s, corr) for s in frag]
-            toc = [(sid, apply_corrections(t, corr)) for sid, t in toc]
             print(f"   + corrections: {len(corr)} rule(s)")
 
         # --- novedades Update 2026 / Legacy (overlays editables) ---

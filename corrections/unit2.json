@@ -1,0 +1,26 @@
+[
+ {
+  "find": "Calculation of iluminance",
+  "replace": "Calculation of illuminance",
+  "type": "spelling",
+  "note": "illuminance"
+ },
+ {
+  "find": "Ohm´s law exercises",
+  "replace": "Ohm's law exercises",
+  "type": "spanish",
+  "note": "acute accent to apostrophe"
+ },
+ {
+  "find": "natural or artificial; a shadow is cast",
+  "replace": "natural or artificial, a shadow is cast",
+  "type": "grammar",
+  "note": "semicolon to comma"
+ },
+ {
+  "find": "three-phase connections one for the sound equipment",
+  "replace": "three-phase connections, one for the sound equipment",
+  "type": "grammar",
+  "note": "missing comma"
+ }
+]

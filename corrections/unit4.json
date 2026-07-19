@@ -1,0 +1,44 @@
+[
+ {
+  "find": "the content that make up a television programme",
+  "replace": "the content that makes up a television programme",
+  "type": "grammar",
+  "note": "subject-verb agreement"
+ },
+ {
+  "find": "structure and content of a television programme is carried out",
+  "replace": "structure and content of a television programme are carried out",
+  "type": "grammar",
+  "note": "compound subject plural verb"
+ },
+ {
+  "find": "through an RF equipment with Belt-pack",
+  "replace": "through RF equipment with Belt-pack",
+  "type": "grammar",
+  "note": "equipment uncountable"
+ },
+ {
+  "find": "Distributors o Splitter",
+  "replace": "Distributors or Splitter",
+  "type": "spanish",
+  "note": "o->or"
+ },
+ {
+  "find": "facilitate its use in different positive dis.",
+  "replace": "facilitate its use in different positions.",
+  "type": "ocr",
+  "note": "garbled positions"
+ },
+ {
+  "find": "two versions: without gle link",
+  "replace": "two versions: single link",
+  "type": "ocr",
+  "note": "REVIEW garbled single link"
+ },
+ {
+  "find": "check what really reaches the audience, is the same sound signal",
+  "replace": "check that what really reaches the audience is the same sound signal",
+  "type": "grammar",
+  "note": "missing that"
+ }
+]

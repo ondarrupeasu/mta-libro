@@ -1,3 +1,115 @@
 [
-  { "find": "TECHNIQIES", "replace": "TECHNIQUES", "note": "typo OCR en el título de la unidad" }
+ {
+  "find": "TECHNIQIES",
+  "replace": "TECHNIQUES",
+  "note": "typo OCR en el título de la unidad"
+ },
+ {
+  "find": "human visión",
+  "replace": "human vision",
+  "type": "spanish",
+  "note": "Spanish leftover"
+ },
+ {
+  "find": "mass thatshould the bodies suffer",
+  "replace": "mass that the bodies should suffer",
+  "type": "ocr",
+  "note": "word merge + order"
+ },
+ {
+  "find": "all directions. being able",
+  "replace": "all directions, being able",
+  "type": "grammar",
+  "note": "sentence fragment"
+ },
+ {
+  "find": "called ether luminous",
+  "replace": "called luminous ether",
+  "type": "grammar",
+  "note": "Spanish adjective order"
+ },
+ {
+  "find": "luminiferous ether Maxwell's",
+  "replace": "luminiferous ether. Maxwell's",
+  "type": "structure",
+  "note": "missing sentence break"
+ },
+ {
+  "find": "the medium in the propagation is taking place",
+  "replace": "the medium in which the propagation is taking place",
+  "type": "grammar",
+  "note": "missing relative pronoun"
+ },
+ {
+  "find": "give rise to an image sharp",
+  "replace": "give rise to a sharp image",
+  "type": "grammar",
+  "note": "adjective order"
+ },
+ {
+  "find": "whose functionThe main one is to control",
+  "replace": "whose main function is to control",
+  "type": "ocr",
+  "note": "word merge"
+ },
+ {
+  "find": "Once through, meets the iris",
+  "replace": "Once through, it meets the iris",
+  "type": "grammar",
+  "note": "missing subject"
+ },
+ {
+  "find": "the desviation of light",
+  "replace": "the deviation of light",
+  "type": "spanish",
+  "note": "Spanish spelling"
+ },
+ {
+  "find": "interpreted colours according to the lengths corresponding waveforms",
+  "replace": "interpreted as colours according to the corresponding wavelengths",
+  "type": "grammar",
+  "note": "garbled clause"
+ },
+ {
+  "find": "the use of colors pigment",
+  "replace": "the use of pigment colors",
+  "type": "grammar",
+  "note": "noun order"
+ },
+ {
+  "find": "each length ofspectrum wave",
+  "replace": "each length of spectrum wave",
+  "type": "ocr",
+  "note": "word merge"
+ },
+ {
+  "find": "CCD (Change Coupled Device)",
+  "replace": "CCD (Charge Coupled Device)",
+  "type": "spelling",
+  "note": "CCD = Charge"
+ },
+ {
+  "find": "how its captures images",
+  "replace": "how it captures images",
+  "type": "grammar",
+  "note": "wrong word"
+ },
+ {
+  "find": "AIRCCAFT",
+  "replace": "AIRCRAFT",
+  "type": "spelling",
+  "note": "typo"
+ },
+ {
+  "find": "PAL, NTRSC, SECAM",
+  "replace": "PAL, NTSC, SECAM",
+  "type": "spelling",
+  "note": "typo"
+ },
+ {
+  "find": "or simple rate of a digital signal",
+  "replace": "or sample rate of a digital signal",
+  "type": "spelling",
+  "note": "sample rate"
+ }
 ]

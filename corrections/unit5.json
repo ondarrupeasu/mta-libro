@@ -1,0 +1,194 @@
+[
+ {
+  "find": "one source and one receiver - to -one source and one receiver- to perform",
+  "replace": "one source and one receiver - to perform",
+  "type": "ocr",
+  "note": "duplicated phrase"
+ },
+ {
+  "find": "we can distinguish in two different",
+  "replace": "we can distinguish two different",
+  "type": "grammar",
+  "note": "distinguish two"
+ },
+ {
+  "find": "requires needs that",
+  "replace": "has needs that",
+  "type": "grammar",
+  "note": "redundant"
+ },
+ {
+  "find": "editing and post- production programmes",
+  "replace": "editing and post-production programmes",
+  "type": "ocr",
+  "note": "hyphen"
+ },
+ {
+  "find": "integrated post- production.",
+  "replace": "integrated post-production.",
+  "type": "ocr",
+  "note": "hyphen"
+ },
+ {
+  "find": "is structured a work system",
+  "replace": "is structured as a work system",
+  "type": "grammar",
+  "note": "missing as"
+ },
+ {
+  "find": "carry out an edition of a sequence.It offers",
+  "replace": "carry out an edition of a sequence. It offers",
+  "type": "ocr",
+  "note": "missing space"
+ },
+ {
+  "find": "Open two editing softwares",
+  "replace": "Open two editing software programs",
+  "type": "grammar",
+  "note": "software uncountable"
+ },
+ {
+  "find": "end- to-end connections",
+  "replace": "end-to-end connections",
+  "type": "ocr",
+  "note": "hyphen"
+ },
+ {
+  "find": "speeds up processes economizes them",
+  "replace": "speeds up processes, economizes them",
+  "type": "grammar",
+  "note": "comma"
+ },
+ {
+  "find": "dedicated to commercialize this kind",
+  "replace": "dedicated to commercializing this kind",
+  "type": "grammar",
+  "note": "gerund"
+ },
+ {
+  "find": "look for information in VSN's official website",
+  "replace": "look for information on VSN's official website",
+  "type": "grammar",
+  "note": "on website"
+ },
+ {
+  "find": "MPEG 2(Moving Pictures Expert Group)",
+  "replace": "MPEG 2 (Moving Pictures Expert Group)",
+  "type": "ocr",
+  "note": "space"
+ },
+ {
+  "find": "MPEG- 4 ALS",
+  "replace": "MPEG-4 ALS",
+  "type": "ocr",
+  "note": "hyphen"
+ },
+ {
+  "find": "AAC (Advan ced Audio Coding)",
+  "replace": "AAC (Advanced Audio Coding)",
+  "type": "ocr",
+  "note": "split word"
+ },
+ {
+  "find": "communicating one to other.",
+  "replace": "communicating with one another.",
+  "type": "grammar",
+  "note": "idiom"
+ },
+ {
+  "find": "Similarly signal is a way of communicating",
+  "replace": "Similarly, a signal is a way of communicating",
+  "type": "grammar",
+  "note": "comma+article"
+ },
+ {
+  "find": "from one system to other system.",
+  "replace": "from one system to another system.",
+  "type": "grammar",
+  "note": "another"
+ },
+ {
+  "find": "In other words signal is a function",
+  "replace": "In other words, a signal is a function",
+  "type": "grammar",
+  "note": "comma+article"
+ },
+ {
+  "find": "Signal is an electromagnetic wave that carries information through physical medium.",
+  "replace": "A signal is an electromagnetic wave that carries information through a physical medium.",
+  "type": "grammar",
+  "note": "articles"
+ },
+ {
+  "find": "are few time varying quantities",
+  "replace": "are a few time-varying quantities",
+  "type": "grammar",
+  "note": "a few"
+ },
+ {
+  "find": "Similarly signal is also represented",
+  "replace": "Similarly, a signal is also represented",
+  "type": "grammar",
+  "note": "comma+article"
+ },
+ {
+  "find": "Signal which are Continuous as time varying in nature are analog sig- nals",
+  "replace": "Signals which are continuous and time varying in nature are analog signals",
+  "type": "grammar",
+  "note": "plural+ocr"
+ },
+ {
+  "find": "Signal which are discrete are called digital signals.",
+  "replace": "Signals which are discrete are called digital signals.",
+  "type": "grammar",
+  "note": "plural"
+ },
+ {
+  "find": "Digital signal are discrete",
+  "replace": "Digital signals are discrete",
+  "type": "grammar",
+  "note": "plural"
+ },
+ {
+  "find": "in form of bits",
+  "replace": "in the form of bits",
+  "type": "grammar",
+  "note": "article"
+ },
+ {
+  "find": "compared to analog signal.",
+  "replace": "compared to analog signals.",
+  "type": "grammar",
+  "note": "plural"
+ },
+ {
+  "find": "in analog channel is done by process called Modulation.",
+  "replace": "in an analog channel is done by a process called modulation.",
+  "type": "grammar",
+  "note": "articles"
+ },
+ {
+  "find": "Troubleshooting of analog signals are difficult.",
+  "replace": "Troubleshooting of analog signals is difficult.",
+  "type": "grammar",
+  "note": "agreement"
+ },
+ {
+  "find": "Troubleshooting of digital signals are easy.",
+  "replace": "Troubleshooting of digital signals is easy.",
+  "type": "grammar",
+  "note": "agreement"
+ },
+ {
+  "find": "continous",
+  "replace": "continuous",
+  "type": "spelling",
+  "note": "misspelling"
+ },
+ {
+  "find": "affacted",
+  "replace": "affected",
+  "type": "spelling",
+  "note": "misspelling"
+ }
+]

@@ -1,0 +1,122 @@
+[
+ {
+  "find": "organization and thus create an international standard",
+  "replace": "organization, thus creating an international standard",
+  "type": "grammar",
+  "note": "parallelism"
+ },
+ {
+  "find": "this organism is responsible",
+  "replace": "this organization is responsible",
+  "type": "spanish",
+  "note": "organismo false friend"
+ },
+ {
+  "find": "(EBU/EBU)",
+  "replace": "(EBU)",
+  "type": "ocr",
+  "note": "duplicated acronym"
+ },
+ {
+  "find": "devices that decodes the signal",
+  "replace": "devices that decode the signal",
+  "type": "grammar",
+  "note": "plural subject agreement"
+ },
+ {
+  "find": "i.e. It converts",
+  "replace": "i.e. it converts",
+  "type": "grammar",
+  "note": "lowercase after i.e."
+ },
+ {
+  "find": "MEPG-2",
+  "replace": "MPEG-2",
+  "type": "spelling",
+  "note": "MPEG typo"
+ },
+ {
+  "find": "video-on- demand operator",
+  "replace": "video-on-demand operator",
+  "type": "ocr",
+  "note": "hyphen split"
+ },
+ {
+  "find": "video-on- demand system",
+  "replace": "video-on-demand system",
+  "type": "ocr",
+  "note": "hyphen split"
+ },
+ {
+  "find": "the Europea Union",
+  "replace": "the European Union",
+  "type": "spelling",
+  "note": "European"
+ },
+ {
+  "find": "free-to- air television",
+  "replace": "free-to-air television",
+  "type": "ocr",
+  "note": "hyphen split"
+ },
+ {
+  "find": "to be able to dine the data",
+  "replace": "to be able to define the data",
+  "type": "spelling",
+  "note": "define"
+ },
+ {
+  "find": "two scenes are envisaged",
+  "replace": "two scenarios are envisaged",
+  "type": "spanish",
+  "note": "escenario = scenario"
+ },
+ {
+  "find": "At the audiovisual sector",
+  "replace": "In the audiovisual sector",
+  "type": "grammar",
+  "note": "preposition"
+ },
+ {
+  "find": "Video streaming it means broadcasting",
+  "replace": "Video streaming means broadcasting",
+  "type": "grammar",
+  "note": "redundant it"
+ },
+ {
+  "find": "Mirrorles",
+  "replace": "Mirrorless",
+  "type": "spelling",
+  "note": "Mirrorless"
+ },
+ {
+  "find": "while the signal is sended",
+  "replace": "while the signal is sent",
+  "type": "grammar",
+  "note": "past participle sent"
+ },
+ {
+  "find": "A fixed connection it is the best option",
+  "replace": "A fixed connection is the best option",
+  "type": "grammar",
+  "note": "redundant it"
+ },
+ {
+  "find": "not prone to interference as wireless signals",
+  "replace": "not prone to interference like wireless signals",
+  "type": "grammar",
+  "note": "comparison"
+ },
+ {
+  "find": "radiofrecuency power",
+  "replace": "radiofrequency power",
+  "type": "spanish",
+  "note": "radiofrecuencia leftover"
+ },
+ {
+  "find": "Don't try to try more resolution",
+  "replace": "Don't try more resolution",
+  "type": "grammar",
+  "note": "duplicated try"
+ }
+]

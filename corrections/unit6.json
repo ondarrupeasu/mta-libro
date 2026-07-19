@@ -1,0 +1,104 @@
+[
+ {
+  "find": "death lines",
+  "replace": "deadlines",
+  "type": "spelling",
+  "note": "deadlines"
+ },
+ {
+  "find": "Houdino",
+  "replace": "Houdini",
+  "type": "spelling",
+  "note": "software Houdini"
+ },
+ {
+  "find": "used in this type of products.",
+  "replace": "used in this type of product.",
+  "type": "grammar",
+  "note": "type of product"
+ },
+ {
+  "find": "3.5-inch (pulgadas)",
+  "replace": "3.5-inch",
+  "type": "spanish",
+  "note": "remove pulgadas"
+ },
+ {
+  "find": "more expensive than external hard disks",
+  "replace": "more expensive than internal hard disks",
+  "type": "structure",
+  "note": "REVIEW internal vs external"
+ },
+ {
+  "find": "has been replaced by the IDE interface",
+  "replace": "has replaced the IDE interface",
+  "type": "grammar",
+  "note": "REVIEW SATA replaced IDE"
+ },
+ {
+  "find": "the hierarchisation of files has been designed by Apple",
+  "replace": "the hierarchisation of files and has been designed by Apple",
+  "type": "grammar",
+  "note": "REVIEW missing conjunction"
+ },
+ {
+  "find": "32 MG",
+  "replace": "32 MB",
+  "type": "ocr",
+  "note": "MB not MG"
+ },
+ {
+  "find": "one- time recording",
+  "replace": "one-time recording",
+  "type": "ocr",
+  "note": "hyphen split"
+ },
+ {
+  "find": "Multisession CD- RW",
+  "replace": "Multisession CD-RW",
+  "type": "ocr",
+  "note": "hyphen split"
+ },
+ {
+  "find": "CD- ROM or DVD recorder",
+  "replace": "CD-ROM or DVD recorder",
+  "type": "ocr",
+  "note": "hyphen split"
+ },
+ {
+  "find": "using the WinZip)",
+  "replace": "using WinZip)",
+  "type": "grammar",
+  "note": "drop article"
+ },
+ {
+  "find": "your Shortfilm",
+  "replace": "your short film",
+  "type": "spelling",
+  "note": "two words"
+ },
+ {
+  "find": "share them in social networks",
+  "replace": "share it on social networks",
+  "type": "grammar",
+  "note": "on social networks"
+ },
+ {
+  "find": "Mpe3",
+  "replace": "mp3",
+  "type": "ocr",
+  "note": "mp3"
+ },
+ {
+  "find": "between the different devices is very few meters",
+  "replace": "between the different devices is within a few meters",
+  "type": "grammar",
+  "note": "broken phrasing"
+ },
+ {
+  "find": "f ) Own multimedia",
+  "replace": "f) Own multimedia",
+  "type": "ocr",
+  "note": "stray space"
+ }
+]
