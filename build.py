@@ -507,7 +507,7 @@ def page_shell(title, unit_nav, toc_html, body, active, search=False):
 <aside>
   <div class="side-head">
     <a class="brand" href="index.html">MTA</a>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Light / dark"><span id="theme-icon">&#9728;</span></button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Light / dark"><span id="theme-icon"></span></button>
   </div>
   <div class="book">Audiovisual &amp; Scenic Technical Means</div>
   {search_ui}
