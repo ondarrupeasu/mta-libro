@@ -500,11 +500,15 @@ def page_shell(title, unit_nav, toc_html, body, active, search=False):
     return f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} — MTA</title>
+<script>(function(){{try{{var t=localStorage.getItem('mta-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
 <link rel="stylesheet" href="assets/style.css">
 </head><body>
 <div class="wrap">
 <aside>
-  <a class="brand" href="index.html">MTA</a>
+  <div class="side-head">
+    <a class="brand" href="index.html">MTA</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Light / dark"><span id="theme-icon">&#9728;</span></button>
+  </div>
   <div class="book">Audiovisual &amp; Scenic Technical Means</div>
   {search_ui}
   <nav class="units">{unit_nav}</nav>
@@ -529,6 +533,7 @@ def page_shell(title, unit_nav, toc_html, body, active, search=False):
   <div id="edits-list"></div>
   <p class="muted small">“Publish to web” commits your photo changes straight to the site (rebuilds in ~1 min). The token stays only in this browser. “Export JSON” just downloads the edits.</p>
 </aside>
+<script src="assets/theme.js" defer></script>
 <script src="assets/search.js" defer></script>
 <script src="assets/editor.js" defer></script>
 </body></html>'''

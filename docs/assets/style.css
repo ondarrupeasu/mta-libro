@@ -2,6 +2,37 @@
   --bg:#faf9f7; --fg:#1f2328; --muted:#6b7280; --line:#e6e3dd; --accent:#b23b2e;
   --upd:#0f766e; --upd-bg:#ecfdf9; --leg:#8a6d3b; --leg-bg:#f7f2e7; --card:#fff;
 }
+/* ---------- dark mode ---------- */
+:root[data-theme="dark"]{
+  --bg:#17181c; --fg:#e7e3dc; --muted:#9aa0a6; --line:rgba(255,255,255,.12);
+  --accent:#e0644e; --card:#202228;
+  --upd:#2dd4bf; --upd-bg:#122a27; --leg:#cba976; --leg-bg:#242015;
+}
+:root[data-theme="dark"] .search input{background:var(--card);color:var(--fg)}
+:root[data-theme="dark"] #results a{background:var(--card)}
+:root[data-theme="dark"] .units a:hover{background:#26282e}
+:root[data-theme="dark"] .units a.active{background:rgba(224,100,78,.18)}
+:root[data-theme="dark"] figure img{background:var(--card)}
+:root[data-theme="dark"] .swap{background:var(--card)}
+:root[data-theme="dark"] .swap:hover{background:#2c2f36}
+/* cajas del libro en oscuro */
+:root[data-theme="dark"] .callout{background:#1e2026}
+:root[data-theme="dark"] .callout.remember{background:#141b2b}
+:root[data-theme="dark"] .callout.advice{background:#1c1630}
+:root[data-theme="dark"] .callout.activity{background:#0f2418}
+:root[data-theme="dark"] .callout.practice{background:#2a1e0f}
+:root[data-theme="dark"] .callout.video{background:#2a1414}
+/* añadidos en oscuro */
+:root[data-theme="dark"] .block.update{border-color:#1f4a44}
+:root[data-theme="dark"] .block.legacy{border-color:#5a4a2a}
+:root[data-theme="dark"] .block.legacy p{color:#d8c9a6}
+:root[data-theme="dark"] .block.update p.sources{color:#7fd8cc}
+/* deck en oscuro */
+:root[data-theme="dark"] .deck{background:#181a22;border-color:#2c3350}
+:root[data-theme="dark"] .deck h2,:root[data-theme="dark"] .deck h3{color:#a5b4fc}
+:root[data-theme="dark"] .card-h .num{color:#fff}
+:root[data-theme="dark"] .dot.book{background:#6b6b6b}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
@@ -12,8 +43,13 @@ a{color:inherit}
 /* ---------- sidebar ---------- */
 aside{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;
   padding:26px 20px;border-right:1px solid var(--line)}
+.side-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .brand{display:inline-block;font-weight:800;font-size:20px;letter-spacing:.02em;
   color:var(--accent);text-decoration:none}
+.theme-toggle{flex:none;width:34px;height:34px;border:1px solid var(--line);background:var(--card);
+  border-radius:9px;cursor:pointer;font-size:16px;line-height:1;color:var(--fg);
+  display:grid;place-items:center;padding:0}
+.theme-toggle:hover{border-color:var(--accent)}
 .book{font-size:12px;color:var(--muted);margin:2px 0 18px}
 .search input{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;
   font:inherit;background:#fff}

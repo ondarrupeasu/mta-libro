@@ -1,11 +1,15 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>UNIT 3: SOUND. TECHNICAL EQUIPMENTS — MTA</title>
+<script>(function(){try{var t=localStorage.getItem('mta-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <link rel="stylesheet" href="assets/style.css">
 </head><body>
 <div class="wrap">
 <aside>
-  <a class="brand" href="index.html">MTA</a>
+  <div class="side-head">
+    <a class="brand" href="index.html">MTA</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Light / dark"><span id="theme-icon">&#9728;</span></button>
+  </div>
   <div class="book">Audiovisual &amp; Scenic Technical Means</div>
   <div class="search"><input id="q" type="search" placeholder="Search the book…" autocomplete="off"><div id="results"></div></div>
   <nav class="units"><a href="unit1.html"><b>1</b> The Image</a>
@@ -307,6 +311,7 @@
   <div id="edits-list"></div>
   <p class="muted small">“Publish to web” commits your photo changes straight to the site (rebuilds in ~1 min). The token stays only in this browser. “Export JSON” just downloads the edits.</p>
 </aside>
+<script src="assets/theme.js" defer></script>
 <script src="assets/search.js" defer></script>
 <script src="assets/editor.js" defer></script>
 </body></html>
