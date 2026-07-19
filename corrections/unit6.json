@@ -37,9 +37,9 @@
  },
  {
   "find": "the hierarchisation of files has been designed by Apple",
-  "replace": "the hierarchisation of files and has been designed by Apple",
+  "replace": "the hierarchisation of files, has been designed by Apple",
   "type": "grammar",
-  "note": "REVIEW missing conjunction"
+  "note": "coma (fiel al original ES)"
  },
  {
   "find": "32 MG",
