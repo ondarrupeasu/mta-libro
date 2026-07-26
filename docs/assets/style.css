@@ -1,3 +1,10 @@
+/* Scrollbars finos unificados (estilo casa) */
+*{scrollbar-width:thin;scrollbar-color:rgba(140,140,150,.45) transparent}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(140,140,150,.45);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:rgba(140,140,150,.7)}
+::-webkit-scrollbar-corner{background:transparent}
 :root{
   --bg:#faf9f7; --fg:#1f2328; --muted:#6b7280; --line:#e6e3dd; --accent:#b23b2e;
   --upd:#0f766e; --upd-bg:#ecfdf9; --leg:#8a6d3b; --leg-bg:#f7f2e7; --card:#fff;
