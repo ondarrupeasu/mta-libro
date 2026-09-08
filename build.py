@@ -503,8 +503,8 @@ def page_shell(title, unit_nav, toc_html, body, active, search=False):
 <script>(function(){{try{{var t=localStorage.getItem('mta-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
 <link rel="stylesheet" href="assets/style.css">
 </head><body>
-<div class="wrap">
-<aside>
+<div class="wrap{' has-onpage' if toc_html else ''}">
+<aside class="side">
   <div class="side-head">
     <a class="brand" href="index.html">MTA</a>
     <button id="theme-toggle" class="theme-toggle" aria-label="Light / dark"><span id="theme-icon"></span></button>
@@ -518,9 +518,9 @@ def page_shell(title, unit_nav, toc_html, body, active, search=False):
     <span><i class="dot leg"></i>Legacy</span>
   </div>
   <button id="editToggle" class="edit-toggle">✎ Edit photos</button>
-  {('<nav class="toc"><div class="toc-h">On this page</div>'+toc_html+'</nav>') if toc_html else ''}
 </aside>
 <main>{body}</main>
+{('<aside class="onpage"><nav class="toc"><div class="toc-h">On this page</div>'+toc_html+'</nav></aside>') if toc_html else ''}
 </div>
 <aside id="edits-panel" class="edits-panel">
   <div class="edits-head">Photo edits (<span id="edits-count">0</span>)</div>
