@@ -1,191 +1,132 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <script>(function(){try{var t=localStorage.getItem('mta-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<title>MTA Session Planner 26/27</title>
+<title>MTA Session Plan 26/27</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
-:root{
-  --paper:#f6f4f0; --ink:#1d1b18; --muted:#726c64; --line:#e4ded4; --card:#fffdfa;
-  --accent:#b23b2e; --accent-soft:#f4e7e4; --support:#4f46e5; --support-soft:#ecebfb;
-  --ma:#b23b2e; --mi:#8a6d3b;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#151619; --ink:#ece7df; --muted:#9a938a; --line:#2a2c30; --card:#1e2024;
-  --accent:#dd6450; --accent-soft:#2c1e1b; --support:#8f8bf6; --support-soft:#20213a;
-  --ma:#dd6450; --mi:#c8a76a;
-}}
-:root[data-theme="dark"]{
-  --paper:#151619; --ink:#ece7df; --muted:#9a938a; --line:#2a2c30; --card:#1e2024;
-  --accent:#dd6450; --accent-soft:#2c1e1b; --support:#8f8bf6; --support-soft:#20213a;
-  --ma:#dd6450; --mi:#c8a76a;
-}
+:root{--paper:#f6f4f0;--ink:#1d1b18;--muted:#726c64;--line:#e4ded4;--card:#fffdfa;
+ --accent:#b23b2e;--accent-soft:#f4e7e4;--support:#4f46e5;--support-soft:#ecebfb;
+ --upd:#0f766e;--upd-soft:#e6f5f1;--deck:#7c3aed;--deck-soft:#f2ecfd;--ma:#b23b2e;--mi:#8a6d3b;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#151619;--ink:#ece7df;
+ --muted:#9a938a;--line:#2a2c30;--card:#1e2024;--accent:#dd6450;--accent-soft:#2c1e1b;
+ --support:#8f8bf6;--support-soft:#20213a;--upd:#2dd4bf;--upd-soft:#10241f;--deck:#a78bfa;
+ --deck-soft:#221c33;--ma:#dd6450;--mi:#c8a76a;}}
+:root[data-theme="dark"]{--paper:#151619;--ink:#ece7df;--muted:#9a938a;--line:#2a2c30;--card:#1e2024;
+ --accent:#dd6450;--accent-soft:#2c1e1b;--support:#8f8bf6;--support-soft:#20213a;--upd:#2dd4bf;
+ --upd-soft:#10241f;--deck:#a78bfa;--deck-soft:#221c33;--ma:#dd6450;--mi:#c8a76a;}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);
-  font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
-.doc{max-width:920px;margin:0 auto;padding:44px 28px 80px}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--accent)}
-h1{font-family:"Archivo",sans-serif;font-weight:800;font-size:40px;line-height:1.02;
-  margin:6px 0 4px;letter-spacing:-.02em;text-wrap:balance}
-.sub{color:var(--muted);font-size:15px;margin:0 0 26px;max-width:60ch}
-.meta{display:flex;flex-wrap:wrap;gap:10px 28px;padding:14px 0;border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);font-size:13.5px}
-.meta b{font-weight:600} .meta span{color:var(--muted)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;
+ line-height:1.5;-webkit-font-smoothing:antialiased}
+.doc{max-width:1000px;margin:0 auto;padding:44px 28px 80px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:"Archivo",sans-serif;font-weight:800;font-size:40px;line-height:1.02;margin:6px 0 4px;letter-spacing:-.02em;text-wrap:balance}
+.sub{color:var(--muted);font-size:15px;margin:0 0 26px;max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:10px 28px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13.5px}
+.meta b{font-weight:600}.meta span{color:var(--muted)}
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 8px}
 .tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-.tile .num{font-family:"Archivo",sans-serif;font-weight:800;font-size:34px;line-height:1;
-  color:var(--accent);font-variant-numeric:tabular-nums}
+.tile .num{font-family:"Archivo",sans-serif;font-weight:800;font-size:34px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
 .tile .lab{font-size:12.5px;color:var(--muted);margin-top:6px}
-.note{font-size:12.5px;color:var(--muted);margin:16px 0 34px;padding:11px 14px;
-  border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
-.block{margin:0 0 40px}
-.bhead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;
-  margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
-.bhead h2{font-family:"Archivo",sans-serif;font-weight:700;font-size:23px;margin:2px 0 0}
+.note{font-size:12.5px;color:var(--muted);margin:16px 0 30px;padding:11px 14px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+.block{margin:0 0 26px}
+.bhead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:14px 0 12px;padding-bottom:9px;border-bottom:2px solid var(--ink)}
+.bhead h2{font-family:"Archivo",sans-serif;font-weight:700;font-size:22px;margin:2px 0 0}
 .btotals{display:flex;gap:8px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:12px}
 .btotals span{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:3px 11px;color:var(--muted)}
-.plan{display:grid;gap:8px;margin:0 0 12px}
-.unit{display:flex;gap:12px;align-items:baseline;background:var(--card);
-  border:1px solid var(--line);border-radius:10px;padding:11px 14px}
-.badge{flex:none;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;
-  color:#fff;background:var(--accent);border-radius:6px;padding:3px 8px}
-.unit b{font-weight:600} .unit .desc{display:block;color:var(--muted);font-size:13px;margin-top:1px}
-.support{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
-.support .lbl{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;
-  letter-spacing:.1em;color:var(--support)}
-.chip{font-size:12.5px;background:var(--support-soft);color:var(--support);
-  border:1px solid var(--support);border-radius:20px;padding:3px 11px}
 table.ses{width:100%;border-collapse:collapse;font-size:13.5px}
-table.ses th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
-  text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:500;
-  padding:6px 10px;border-bottom:1px solid var(--line)}
-table.ses td{padding:6px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
-td.n{font-family:"IBM Plex Mono",monospace;color:var(--muted);width:44px}
-td.fecha{font-weight:600;width:110px}
-td.dia{color:var(--muted)}
-td.h{font-family:"IBM Plex Mono",monospace;text-align:right;width:60px}
-tr.ma td.fecha{color:var(--ma)} tr.mi td.fecha{color:var(--mi)}
-tr.ma td.fecha::before,tr.mi td.fecha::before{content:"";display:inline-block;width:7px;height:7px;
-  border-radius:2px;margin-right:8px;vertical-align:middle}
-tr.ma td.fecha::before{background:var(--ma)} tr.mi td.fecha::before{background:var(--mi)}
-.fest{margin:14px 0 0;font-size:13px;color:var(--muted);text-align:center;
-  font-family:"IBM Plex Mono",monospace;letter-spacing:.02em}
-.legwrap{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin:2px 0 0}
+table.ses th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:500;padding:6px 10px;border-bottom:1px solid var(--line)}
+table.ses td{padding:7px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;vertical-align:baseline}
+td.n{font-family:"IBM Plex Mono",monospace;color:var(--muted);width:38px}
+td.fecha{font-weight:600;width:78px;white-space:nowrap}
+td.dia{color:var(--muted);width:44px}
+td.h{font-family:"IBM Plex Mono",monospace;width:38px;color:var(--muted)}
+td.cont{line-height:1.45}
+tr.ma td.fecha{color:var(--ma)}tr.mi td.fecha{color:var(--mi)}
+tr.ma td.fecha::before,tr.mi td.fecha::before{content:"";display:inline-block;width:7px;height:7px;border-radius:2px;margin-right:7px;vertical-align:middle}
+tr.ma td.fecha::before{background:var(--ma)}tr.mi td.fecha::before{background:var(--mi)}
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;color:#fff;background:var(--accent);border-radius:5px;padding:2px 6px;margin-right:8px;vertical-align:middle}
+.badge.rev{background:var(--muted)}
+.topic{vertical-align:middle}
+.rowchip{display:inline-block;font-size:10.5px;border-radius:20px;padding:1px 8px;margin-left:7px;vertical-align:middle;white-space:nowrap;border:1px solid}
+.rowchip.mat{color:var(--support);background:var(--support-soft);border-color:var(--support)}
+.rowchip.upd{color:var(--upd);background:var(--upd-soft);border-color:var(--upd)}
+.rowchip.deck{color:var(--deck);background:var(--deck-soft);border-color:var(--deck)}
+.fest{margin:12px 0 6px;font-size:13px;color:var(--muted);text-align:center;font-family:"IBM Plex Mono",monospace}
+.legwrap{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:8px 0 0}
 .legwrap i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:middle}
-footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-@media(max-width:680px){.tiles{grid-template-columns:1fr 1fr} h1{font-size:32px}
-  .bhead{flex-direction:column;align-items:flex-start}}
-@media print{
-  :root{--paper:#fff;--card:#fff;--ink:#000;--muted:#444;--line:#ccc;--accent-soft:#fff}
-  .doc{max-width:none;padding:0} .tile,.unit{break-inside:avoid}
-  .block{break-before:page} .block:first-of-type{break-before:auto}
-}
+footer{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media(max-width:680px){.tiles{grid-template-columns:1fr 1fr}h1{font-size:30px}
+ td.dia,th:nth-child(3){display:none}.rowchip{margin-left:0;margin-top:3px}}
+@media print{:root{--paper:#fff;--card:#fff;--ink:#000;--muted:#444;--line:#ccc;--accent-soft:#fff}
+ .doc{max-width:none;padding:0}.block{break-inside:auto}tr{break-inside:avoid}}
 </style>
 </head><body>
-<div class="doc">
-  <span class="eyebrow">Audiovisual &amp; Scenic Technical Means · 1RPA · 2026/27</span>
-  <h1>Session planner</h1>
-  <p class="sub">The book's 7 units mapped across the year, with the module's support materials. A working proposal — adjust it to your own pace.</p>
-  <div class="meta">
-    <span>Group <b>1RPA (1st year)</b></span>
-    <span>Schedule <b>Tue 3 h · Wed 2 h</b></span>
-    <span>Course <b>8 Sep 2026 → 7 May 2027</b></span>
-  </div>
-  <div class="tiles">
-    <div class="tile"><div class="num">58</div><div class="lab">teaching sessions</div></div>
-    <div class="tile"><div class="num">145</div><div class="lab">class hours</div></div>
-    <div class="tile"><div class="num">7</div><div class="lab">units of the book</div></div>
-  </div>
-  <div class="legwrap"><span><i style="background:var(--ma)"></i>Tuesday · 3 h</span><span><i style="background:var(--mi)"></i>Wednesday · 2 h</span></div>
-  <p class="note"><b>Materials:</b> the book (mta.cinemafilmak.com) as the core reference; <b>AVHandbook</b> for cross-cutting consultation all year; <b>SoundLab</b> in the sound unit and <b>Puzzle de Realización</b> in the multicam unit. The unit-per-block split is an editable proposal, not a straitjacket.</p>
-  <section class="block">
-  <header class="bhead">
-    <div><span class="eyebrow">Block 1</span><h2>8 Sep — 22 Dec 2026</h2></div>
-    <div class="btotals"><span>30 sessions</span><span>75 h</span></div>
-  </header>
-  <div class="plan"><div class="unit"><span class="badge">Unit 1</span><div><b>The Image</b><span class="desc">Physics of light, capture, the camera, formats</span></div></div><div class="unit"><span class="badge">Unit 2</span><div><b>Lighting</b><span class="desc">Light quality, sources, electricity, desks · + The Light Sources deck</span></div></div><div class="unit"><span class="badge">Unit 3</span><div><b>Sound (start)</b><span class="desc">Sound: definition and physical qualities</span></div></div></div>
-  <div class="support"><span class="lbl">Support</span><span class="chip">SoundLab · interactive sound lab</span></div>
-  <table class="ses"><thead><tr><th>No.</th><th>Date</th><th>Day</th><th>Hours</th></tr></thead>
-  <tbody><tr class="ma"><td class="n">1</td><td class="fecha">8 Sep</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">2</td><td class="fecha">9 Sep</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">3</td><td class="fecha">15 Sep</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">4</td><td class="fecha">16 Sep</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">5</td><td class="fecha">22 Sep</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">6</td><td class="fecha">23 Sep</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">7</td><td class="fecha">29 Sep</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">8</td><td class="fecha">30 Sep</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">9</td><td class="fecha">6 Oct</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">10</td><td class="fecha">7 Oct</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">11</td><td class="fecha">13 Oct</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">12</td><td class="fecha">14 Oct</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">13</td><td class="fecha">20 Oct</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">14</td><td class="fecha">21 Oct</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">15</td><td class="fecha">27 Oct</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">16</td><td class="fecha">28 Oct</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">17</td><td class="fecha">3 Nov</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">18</td><td class="fecha">4 Nov</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">19</td><td class="fecha">10 Nov</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">20</td><td class="fecha">11 Nov</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">21</td><td class="fecha">17 Nov</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">22</td><td class="fecha">18 Nov</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">23</td><td class="fecha">24 Nov</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">24</td><td class="fecha">25 Nov</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">25</td><td class="fecha">1 Dec</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">26</td><td class="fecha">2 Dec</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="mi"><td class="n">27</td><td class="fecha">9 Dec</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">28</td><td class="fecha">15 Dec</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">29</td><td class="fecha">16 Dec</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">30</td><td class="fecha">22 Dec</td><td class="dia">Tue</td><td class="h">3 h</td></tr></tbody></table>
-  <p class="fest">🎄 Christmas · 23 Dec – 6 Jan (+ Immaculate Conception, 8 Dec)</p>
-</section>
-<section class="block">
-  <header class="bhead">
-    <div><span class="eyebrow">Block 2</span><h2>12 Jan — 17 Mar 2027</h2></div>
-    <div class="btotals"><span>18 sessions</span><span>45 h</span></div>
-  </header>
-  <div class="plan"><div class="unit"><span class="badge">Unit 3</span><div><b>Sound (finish)</b><span class="desc">Microphones, audio lines, mixing desks</span></div></div><div class="unit"><span class="badge">Unit 4</span><div><b>Multicam</b><span class="desc">Multi-camera production, control, mixer, intercom</span></div></div><div class="unit"><span class="badge">Unit 5</span><div><b>Post-production</b><span class="desc">Non-linear editing, media, delivery formats</span></div></div></div>
-  <div class="support"><span class="lbl">Support</span><span class="chip">Puzzle de Realización · TV setup routing game</span><span class="chip">SoundLab · audio reinforcement</span></div>
-  <table class="ses"><thead><tr><th>No.</th><th>Date</th><th>Day</th><th>Hours</th></tr></thead>
-  <tbody><tr class="ma"><td class="n">31</td><td class="fecha">12 Jan</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">32</td><td class="fecha">13 Jan</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">33</td><td class="fecha">19 Jan</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">34</td><td class="fecha">20 Jan</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">35</td><td class="fecha">26 Jan</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">36</td><td class="fecha">27 Jan</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">37</td><td class="fecha">2 Feb</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">38</td><td class="fecha">3 Feb</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">39</td><td class="fecha">16 Feb</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">40</td><td class="fecha">17 Feb</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">41</td><td class="fecha">23 Feb</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">42</td><td class="fecha">24 Feb</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">43</td><td class="fecha">2 Mar</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">44</td><td class="fecha">3 Mar</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">45</td><td class="fecha">9 Mar</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">46</td><td class="fecha">10 Mar</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">47</td><td class="fecha">16 Mar</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">48</td><td class="fecha">17 Mar</td><td class="dia">Wed</td><td class="h">2 h</td></tr></tbody></table>
-  <p class="fest">❄️ Half-term break · 8–12 Feb  →  🌷 Easter · 20 Mar – 4 Apr</p>
-</section>
-<section class="block">
-  <header class="bhead">
-    <div><span class="eyebrow">Block 3</span><h2>6 Apr — 5 May 2027</h2></div>
-    <div class="btotals"><span>10 sessions</span><span>25 h</span></div>
-  </header>
-  <div class="plan"><div class="unit"><span class="badge">Unit 6</span><div><b>Multimedia</b><span class="desc">Equipment, networks, storage, image apps</span></div></div><div class="unit"><span class="badge">Unit 7</span><div><b>Transmitting & Broadcasting</b><span class="desc">Standards, IPTV/OTT, streaming</span></div></div><div class="unit"><span class="badge">Unit ·</span><div><b>Review / project</b><span class="desc">Wrap-up and integrative project</span></div></div></div>
-  
-  <table class="ses"><thead><tr><th>No.</th><th>Date</th><th>Day</th><th>Hours</th></tr></thead>
-  <tbody><tr class="ma"><td class="n">49</td><td class="fecha">6 Apr</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">50</td><td class="fecha">7 Apr</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">51</td><td class="fecha">13 Apr</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">52</td><td class="fecha">14 Apr</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">53</td><td class="fecha">20 Apr</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">54</td><td class="fecha">21 Apr</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">55</td><td class="fecha">27 Apr</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">56</td><td class="fecha">28 Apr</td><td class="dia">Wed</td><td class="h">2 h</td></tr>
-<tr class="ma"><td class="n">57</td><td class="fecha">4 May</td><td class="dia">Tue</td><td class="h">3 h</td></tr>
-<tr class="mi"><td class="n">58</td><td class="fecha">5 May</td><td class="dia">Wed</td><td class="h">2 h</td></tr></tbody></table>
-  
-</section>
-  <footer>Dates computed on the 1st-year 2026/27 calendar (holidays: Immaculate Conception 8 Dec · Christmas 23 Dec–6 Jan · half-term 8–12 Feb · Easter 20 Mar–4 Apr). Made for Alex — Tartanga.</footer>
-</div>
+<div class="doc"><span class="eyebrow">Audiovisual &amp; Scenic Technical Means · 1RPA · 2026/27</span><h1>Session-by-session plan</h1><p class="sub">What each of the 58 classes covers, mapped to the book’s own sections. A working proposal — move topics between sessions to suit your pace.</p><div class="meta"><span>Group <b>1RPA (1st year)</b></span><span>Schedule <b>Tue 3 h · Wed 2 h</b></span><span>Course <b>8 Sep 2026 → 7 May 2027</b></span></div><div class="tiles"><div class="tile"><div class="num">58</div><div class="lab">teaching sessions</div></div><div class="tile"><div class="num">145</div><div class="lab">class hours</div></div><div class="tile"><div class="num">7</div><div class="lab">units of the book</div></div></div><div class="legwrap"><span><i style="background:var(--ma)"></i>Tue · 3 h</span><span><i style="background:var(--mi)"></i>Wed · 2 h</span><span><i style="background:var(--support)"></i>support material</span><span><i style="background:var(--upd)"></i>Update 2026</span><span><i style="background:var(--deck)"></i>deck</span></div><p class="note"><b>Materials:</b> the book (mta.cinemafilmak.com) is the core reference and <b>AVHandbook</b> backs up every unit all year. Chips mark where <b>SoundLab</b>, the <b>Light Sources</b> deck, the <b>Puzzle de Realización</b> and <b>InterTalkR/LiveCastR</b> come in, and where a <b>2026 update</b> extends the book. Session split = editable proposal.</p><section class="block">
+  <header class="bhead"><div><span class="eyebrow">Block 1 · Units 1–3</span><h2>8 Sep — 22 Dec 2026</h2></div>
+  <div class="btotals"><span>30 sessions</span><span>75 h</span></div></header>
+  <table class="ses"><thead><tr><th>No.</th><th>Date</th><th>Day</th><th>h</th><th>Session content</th></tr></thead>
+  <tbody><tr class="ma"><td class="n">1</td><td class="fecha">8 Sep</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge rev">·</span><span class="topic">Module intro · how the online book works</span></td></tr>
+<tr class="mi"><td class="n">2</td><td class="fecha">9 Sep</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U1</span><span class="topic">1.1 Physics of light & human vision — spectrum, the eye (1/2)</span></td></tr>
+<tr class="ma"><td class="n">3</td><td class="fecha">15 Sep</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U1</span><span class="topic">1.1 Physics of light & human vision — spectrum, the eye (2/2)</span></td></tr>
+<tr class="mi"><td class="n">4</td><td class="fecha">16 Sep</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U1</span><span class="topic">1.2 How a video camera works — optics to sensor</span></td></tr>
+<tr class="ma"><td class="n">5</td><td class="fecha">22 Sep</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U1</span><span class="topic">1.3 The camera — settings, parameters, connectors, types (1/2)</span></td></tr>
+<tr class="mi"><td class="n">6</td><td class="fecha">23 Sep</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U1</span><span class="topic">1.3 The camera — settings, parameters, connectors, types (2/2)</span></td></tr>
+<tr class="ma"><td class="n">7</td><td class="fecha">29 Sep</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U1</span><span class="topic">1.4 Digital recording — signals, sampling, bits, scanning</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">8</td><td class="fecha">30 Sep</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U1</span><span class="topic">1.5 Formats & recording media (cards, SSD, CFexpress)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">9</td><td class="fecha">6 Oct</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.1 Expressive quality of light · photometry · colour temp. (1/2)</span></td></tr>
+<tr class="mi"><td class="n">10</td><td class="fecha">7 Oct</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.1 Expressive quality of light · photometry · colour temp. (2/2)</span></td></tr>
+<tr class="ma"><td class="n">11</td><td class="fecha">13 Oct</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.2 Hardness & softness of the beam · coverage</span></td></tr>
+<tr class="mi"><td class="n">12</td><td class="fecha">14 Oct</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.3 Types of light sources — incl. The Light Sources deck (1/3)</span><span class="rowchip deck">Light Sources deck</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">13</td><td class="fecha">20 Oct</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.3 Types of light sources — incl. The Light Sources deck (2/3)</span><span class="rowchip deck">Light Sources deck</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">14</td><td class="fecha">21 Oct</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.3 Types of light sources — incl. The Light Sources deck (3/3)</span><span class="rowchip deck">Light Sources deck</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">15</td><td class="fecha">27 Oct</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.4 Applied electricity for lighting installations (1/2)</span></td></tr>
+<tr class="mi"><td class="n">16</td><td class="fecha">28 Oct</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.4 Applied electricity for lighting installations (2/2)</span></td></tr>
+<tr class="ma"><td class="n">17</td><td class="fecha">3 Nov</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U2</span><span class="topic">2.5 Lighting desks / DMX</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">18</td><td class="fecha">4 Nov</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.1 Definition of sound · physical & physiological qualities (1/2)</span><span class="rowchip mat">SoundLab</span></td></tr>
+<tr class="ma"><td class="n">19</td><td class="fecha">10 Nov</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.1 Definition of sound · physical & physiological qualities (2/2)</span><span class="rowchip mat">SoundLab</span></td></tr>
+<tr class="mi"><td class="n">20</td><td class="fecha">11 Nov</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.1.1–2 Sound waves & characteristics (f, λ, amplitude) (1/2)</span><span class="rowchip mat">SoundLab</span></td></tr>
+<tr class="ma"><td class="n">21</td><td class="fecha">17 Nov</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.1.1–2 Sound waves & characteristics (f, λ, amplitude) (2/2)</span><span class="rowchip mat">SoundLab</span></td></tr>
+<tr class="mi"><td class="n">22</td><td class="fecha">18 Nov</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.1.3–4 Physiology of hearing · sound qualities</span></td></tr>
+<tr class="ma"><td class="n">23</td><td class="fecha">24 Nov</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.1.5 Physical phenomena (reflection, diffraction, resonance)</span></td></tr>
+<tr class="mi"><td class="n">24</td><td class="fecha">25 Nov</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.2 Microphones — definition & characteristics (1/2)</span></td></tr>
+<tr class="ma"><td class="n">25</td><td class="fecha">1 Dec</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.2 Microphones — definition & characteristics (2/2)</span></td></tr>
+<tr class="mi"><td class="n">26</td><td class="fecha">2 Dec</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.2.2–3 Types by construction · accessories</span></td></tr>
+<tr class="mi"><td class="n">27</td><td class="fecha">9 Dec</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.2.4 Powering (phantom) · 3.3 audio lines & connectors (1/2)</span></td></tr>
+<tr class="ma"><td class="n">28</td><td class="fecha">15 Dec</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.2.4 Powering (phantom) · 3.3 audio lines & connectors (2/2)</span></td></tr>
+<tr class="mi"><td class="n">29</td><td class="fecha">16 Dec</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.4 Analogue & digital mixing desks (1/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">30</td><td class="fecha">22 Dec</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U3</span><span class="topic">3.4 Analogue & digital mixing desks (2/2)</span><span class="rowchip upd">Update 2026</span></td></tr></tbody></table></section><p class="fest">🎄 Christmas · 23 Dec – 6 Jan  (+ Immaculate Conception, 8 Dec)</p><section class="block">
+  <header class="bhead"><div><span class="eyebrow">Block 2 · Units 4–5</span><h2>12 Jan — 17 Mar 2027</h2></div>
+  <div class="btotals"><span>18 sessions</span><span>45 h</span></div></header>
+  <table class="ses"><thead><tr><th>No.</th><th>Date</th><th>Day</th><th>h</th><th>Session content</th></tr></thead>
+  <tbody><tr class="ma"><td class="n">31</td><td class="fecha">12 Jan</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.1 TV production control — set-up, studio camera, continuity (1/2)</span></td></tr>
+<tr class="mi"><td class="n">32</td><td class="fecha">13 Jan</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.1 TV production control — set-up, studio camera, continuity (2/2)</span></td></tr>
+<tr class="ma"><td class="n">33</td><td class="fecha">19 Jan</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.2 System configurations · production control · CCU (1/2)</span></td></tr>
+<tr class="mi"><td class="n">34</td><td class="fecha">20 Jan</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.2 System configurations · production control · CCU (2/2)</span></td></tr>
+<tr class="ma"><td class="n">35</td><td class="fecha">26 Jan</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.2.2–3 Waveform monitors & vectorscopes · block diagram</span></td></tr>
+<tr class="mi"><td class="n">36</td><td class="fecha">27 Jan</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.3 Audio inputs & sends · 4.4 the video mixer (1/2)</span></td></tr>
+<tr class="ma"><td class="n">37</td><td class="fecha">2 Feb</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.3 Audio inputs & sends · 4.4 the video mixer (2/2)</span></td></tr>
+<tr class="mi"><td class="n">38</td><td class="fecha">3 Feb</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.5 Programme vs intercom audio · intercom · tally</span><span class="rowchip mat">InterTalkR</span></td></tr>
+<tr class="ma"><td class="n">39</td><td class="fecha">16 Feb</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U4</span><span class="topic">4.6 Recording media & formats</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">40</td><td class="fecha">17 Feb</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U4</span><span class="topic">Practice — routing a TV setup</span><span class="rowchip mat">Puzzle de Realización</span></td></tr>
+<tr class="ma"><td class="n">41</td><td class="fecha">23 Feb</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U5</span><span class="topic">5.1 Configuring post-production resources</span></td></tr>
+<tr class="mi"><td class="n">42</td><td class="fecha">24 Feb</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U5</span><span class="topic">5.2 Linear vs non-linear · VTR · workstations & software (1/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">43</td><td class="fecha">2 Mar</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U5</span><span class="topic">5.2 Linear vs non-linear · VTR · workstations & software (2/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">44</td><td class="fecha">3 Mar</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U5</span><span class="topic">5.3 Advantages/disadvantages · storage, capture, digitising</span></td></tr>
+<tr class="ma"><td class="n">45</td><td class="fecha">9 Mar</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U5</span><span class="topic">5.4–5.5 Media & delivery formats · codecs vs containers (1/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">46</td><td class="fecha">10 Mar</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U5</span><span class="topic">5.4–5.5 Media & delivery formats · codecs vs containers (2/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">47</td><td class="fecha">16 Mar</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U5</span><span class="topic">5.6 NLE tools · 5.8 analogue vs digital signals</span></td></tr>
+<tr class="mi"><td class="n">48</td><td class="fecha">17 Mar</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge rev">·</span><span class="topic">Term review & assessment</span></td></tr></tbody></table></section><p class="fest">❄️ Half-term · 8–12 Feb   →   🌷 Easter · 20 Mar – 4 Apr</p><section class="block">
+  <header class="bhead"><div><span class="eyebrow">Block 3 · Units 6–7 + project</span><h2>6 Apr — 5 May 2027</h2></div>
+  <div class="btotals"><span>10 sessions</span><span>25 h</span></div></header>
+  <table class="ses"><thead><tr><th>No.</th><th>Date</th><th>Day</th><th>h</th><th>Session content</th></tr></thead>
+  <tbody><tr class="ma"><td class="n">49</td><td class="fecha">6 Apr</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U6</span><span class="topic">6.1–6.2 Equipment · computer qualities (CPU/GPU/storage/RAID) (1/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">50</td><td class="fecha">7 Apr</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U6</span><span class="topic">6.1–6.2 Equipment · computer qualities (CPU/GPU/storage/RAID) (2/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">51</td><td class="fecha">13 Apr</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U6</span><span class="topic">6.3 Networks, topologies, storage & backups</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">52</td><td class="fecha">14 Apr</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U6</span><span class="topic">6.4 Image-processing apps · interactive projects</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">53</td><td class="fecha">20 Apr</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U7</span><span class="topic">7.1–7.2 Standards · DVB · IPTV & OTT (1/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="mi"><td class="n">54</td><td class="fecha">21 Apr</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U7</span><span class="topic">7.1–7.2 Standards · DVB · IPTV & OTT (2/2)</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">55</td><td class="fecha">27 Apr</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge">U7</span><span class="topic">7.3 Radio broadcasting · modulation · frequency bands</span></td></tr>
+<tr class="mi"><td class="n">56</td><td class="fecha">28 Apr</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge">U7</span><span class="topic">7.4–7.5 Digital media config · streaming · bitrate · bonding</span><span class="rowchip mat">LiveCastR</span><span class="rowchip upd">Update 2026</span></td></tr>
+<tr class="ma"><td class="n">57</td><td class="fecha">4 May</td><td class="dia">Tue</td><td class="h">3 h</td><td class="cont"><span class="badge rev">·</span><span class="topic">Integrative project · final assessment (1/2)</span></td></tr>
+<tr class="mi"><td class="n">58</td><td class="fecha">5 May</td><td class="dia">Wed</td><td class="h">2 h</td><td class="cont"><span class="badge rev">·</span><span class="topic">Integrative project · final assessment (2/2)</span></td></tr></tbody></table></section><footer>Dates on the 1st-year 2026/27 calendar (holidays: Immaculate Conception 8 Dec · Christmas 23 Dec–6 Jan · half-term 8–12 Feb · Easter 20 Mar–4 Apr). Topic split is a proposal — Alex, Tartanga.</footer></div>
 </body></html>
