@@ -5,3 +5,4 @@ __pycache__/
 mta-libro-web.zip
 print/*.pdf
 print/*.html
+moodle/dist/
