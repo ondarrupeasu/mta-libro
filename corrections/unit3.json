@@ -108,6 +108,24 @@
   "note": "pascal unit case"
  },
  {
+  "find": "when the input has a certain sound pressure value.",
+  "replace": "when the input has a certain sound pressure value: 𝑠 = 𝑉 / 𝑃",
+  "type": "content",
+  "note": "formula lost in extraction (it is in the PDF, before where:)"
+ },
+ {
+  "find": "P is the sound pressure which is measured in hertz (Hz). So s is expressed in millivolts per pascal (mv/Pa).",
+  "replace": "P is the sound pressure which is measured in pascals (Pa). So s is expressed in millivolts per pascal (mV/Pa).",
+  "type": "content",
+  "note": "sound pressure is in pascals, not hertz; mV/Pa unit case"
+ },
+ {
+  "find": "𝑆𝑡= 20𝑙𝑜𝑔 ( 𝑆",
+  "replace": "𝑆𝑡 = 20 𝑙𝑜𝑔 ( 𝑆 / 𝑆𝑟𝑒𝑓 ), where 𝑆𝑟𝑒𝑓 = 1 V/Pa. The sensitivity level is expressed in decibels relative to 1 V/Pa (dBV/Pa).",
+  "type": "content",
+  "note": "formula was cut off (the PDF has St in the denominator; it must be Sref = 1 V/Pa); unit of the level added"
+ },
+ {
   "find": "TDH or total harmonic distortion",
   "replace": "THD or total harmonic distortion",
   "type": "spelling",
