@@ -118,5 +118,11 @@
   "replace": "Don't try more resolution",
   "type": "grammar",
   "note": "duplicated try"
+ },
+ {
+  "find": "marketed as \"10 megabytes\" is 10 megabytes downstream, if it even has 1 megabyte upstream. And a connection sold as \"100 megabytes\" downstream, has at most 8 megabytes upstream.",
+  "replace": "marketed as \"10 Mbps\" is 10 Mbps (megabits per second) downstream, if it even has 1 Mbps upstream. And a connection sold as \"100 Mbps\" downstream, has at most 8 Mbps upstream.",
+  "type": "content",
+  "note": "connections are sold in megabits per second, not megabytes"
  }
 ]

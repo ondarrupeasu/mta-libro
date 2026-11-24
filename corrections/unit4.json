@@ -40,5 +40,11 @@
   "replace": "check that what really reaches the audience is the same sound signal",
   "type": "grammar",
   "note": "missing that"
+ },
+ {
+  "find": "up to 32.40 GB/s",
+  "replace": "up to 32.40 Gbit/s",
+  "type": "content",
+  "note": "DisplayPort bandwidth is in gigabits, not gigabytes, per second"
  }
 ]

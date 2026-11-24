@@ -166,5 +166,11 @@
   "replace": "as analogue mixers, implementing",
   "type": "grammar",
   "note": "missing plural/article"
+ },
+ {
+  "find": "v = 340 + 0.6 · t",
+  "replace": "v = 331.4 + 0.6 · t",
+  "type": "content",
+  "note": "speed of sound at 0 ºC is 331.4 m/s (about 343 m/s at 20 ºC); 340 is only a rounded reference value"
  }
 ]
